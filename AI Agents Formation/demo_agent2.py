@@ -1,3 +1,8 @@
+'''
+-This is an AI agent that works on the OpenRouter Free Models API.
+-This Agent prints the response from the API in a streaming manner, allowing you to see the AI's response as it is generated.
+'''
+
 import os
 import json
 import requests
