@@ -1,10 +1,9 @@
-langchain
 langgraph
+langchain
+ipython
 langchain_openai
+langchain_community
 dotenv
-openai
+typing
 chromadb
-pypdf
-langchain-community
-langchain-chroma
-langchain-text-splitters
+langchain_chroma
