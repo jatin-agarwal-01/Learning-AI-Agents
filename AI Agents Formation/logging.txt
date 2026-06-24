@@ -1,0 +1,7 @@
+Your Conversation Log:
+You: qwerty
+AI: It looks like you've entered "qwerty." Is there something specific you'd like to know or discuss related to that? It can refer to the keyboard layout or something else entirely. Let me know how I can help!
+You: Hi, I am Jatin Agarwal
+AI: Hi, Jatin Agarwal! How can I assist you today?
+
+End of Conversation
