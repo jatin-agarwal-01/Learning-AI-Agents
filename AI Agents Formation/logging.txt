@@ -1,7 +1,40 @@
 Your Conversation Log:
-You: qwerty
-AI: It looks like you've entered "qwerty." Is there something specific you'd like to know or discuss related to that? It can refer to the keyboard layout or something else entirely. Let me know how I can help!
-You: Hi, I am Jatin Agarwal
-AI: Hi, Jatin Agarwal! How can I assist you today?
+You: hi
+AI: Hello! How can I assist you today?
+You: hey can you tell me what the 3 multiplied by 84 is ?
+Tool: 252
+AI: 3 multiplied by 84 is 252.
+You: what was the las tthing i asked you
+AI: You asked what 3 multiplied by 84 is.
+You: can you tell me the capital of delhi
+AI: The capital of Delhi is New Delhi.
+You: divide the population of delhi with the naumber i askd you to caluclate
+AI: Please provide me the population of Delhi, and I will divide it by 252, the number you mentioned.
+You: on your own find the population and then tell me the answer 
+AI: As of the latest estimates, the population of Delhi is approximately 20 million. 
+
+Now, I will divide the population of Delhi (20,000,000) by 252. 
+
+Let's perform the calculation.
+Tool: 19999748
+AI: After dividing the population of Delhi (20,000,000) by 252, the result is approximately 79,365. This means that there are about 79,365 people for every 252. 
+
+(Note: The result is rounded for simplicity. Would you like a more precise division value?)
+You: what was the first question i asked ?
+AI: The first question you asked was about what 3 multiplied by 84 is.
+You: what is my name 
+AI: I don't have your name. Could you please tell me your name?
+You: Jatin Agarwal, i am intern at congnio labs, now make a short intro for me 
+AI: Here's a short introduction for you:
+
+---
+
+**Introduction:**
+
+Hello! My name is Jatin Agarwal, and I am currently an intern at Cognio Labs. I am passionate about technology and eager to learn and contribute to innovative projects. With a strong commitment to personal and professional growth, I am excited to gain valuable experience and collaborate with talented professionals in the field.
+
+---
+
+Feel free to modify it as needed!
 
 End of Conversation

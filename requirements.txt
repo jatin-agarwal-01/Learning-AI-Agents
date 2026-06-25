@@ -1,0 +1,6 @@
+langchain==1.3.11
+langchain-openai==1.3.3
+langgraph==1.2.6
+openai==2.43.0
+portkey-ai==2.3.2
+python-dotenv==1.2.2
