@@ -77,12 +77,25 @@ graph.add_edge("tools", "our_agent")
 app=graph.compile()
 
 def print_stream(stream):
+    latest_messages = []
     for s in stream:
-        message = s["messages"][-1]
+        latest_messages = s["messages"]
+        message = latest_messages[-1]
         if isinstance(message, tuple):
             print(message)
         else:
             message.pretty_print()
+    return list(latest_messages)
 
-inputs = {"messages":[("user", "Add 40+12 then multiply by 6. Also tell me a joke.")]}
-print_stream(app.stream(inputs, stream_mode="values"))
+def run_agent_turn(user_input: str):
+    return print_stream(
+        app.stream({"messages": [("user", user_input)]}, stream_mode="values")
+    )
+
+
+def main() -> None:
+    run_agent_turn("Add 40+12 then multiply by 6. Also tell me a joke.")
+
+
+if __name__ == "__main__":
+    main()

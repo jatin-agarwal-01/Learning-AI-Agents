@@ -91,29 +91,40 @@ def print_stream(stream):
         printed_count = len(latest_messages)
     return list(latest_messages)
 
-print("ReAct agent is ready. Type 'exit' or 'quit' to stop.")
-conversation_history: list[BaseMessage] = []
+def run_agent_turn(conversation_history: list[BaseMessage], user_input: str):
+    updated_history = list(conversation_history)
+    updated_history.append(HumanMessage(content=user_input))
+    return print_stream(app.stream({"messages": updated_history}, stream_mode="values"))
 
-user_input = input("\nPlease Enter Your Message: ")
-while user_input != "exit" and user_input != "quit":
-    if user_input:
-        conversation_history.append(HumanMessage(content=user_input))
-        conversation_history = print_stream(
-            app.stream({"messages": conversation_history}, stream_mode="values")
-        )
+
+def save_conversation_log(conversation_history: list[BaseMessage], log_path: str = "logging.txt"):
+    with open(log_path, "w") as file:
+        file.write("Your Conversation Log:\n")
+        for message in conversation_history:
+            if isinstance(message, HumanMessage):
+                file.write(f"You: {message.content}\n")
+            elif isinstance(message, AIMessage):
+                ai_text = str(message.content).strip()
+                if ai_text:
+                    file.write(f"AI: {ai_text}\n")
+            elif isinstance(message, ToolMessage):
+                file.write(f"Tool: {message.content}\n")
+        file.write("\nEnd of Conversation\n")
+
+
+def main() -> None:
+    print("ReAct agent is ready. Type 'exit' or 'quit' to stop.")
+    conversation_history: list[BaseMessage] = []
+
     user_input = input("\nPlease Enter Your Message: ")
+    while user_input != "exit" and user_input != "quit":
+        if user_input:
+            conversation_history = run_agent_turn(conversation_history, user_input)
+        user_input = input("\nPlease Enter Your Message: ")
 
-with open("logging.txt", "w") as file:
-    file.write("Your Conversation Log:\n")
-    for message in conversation_history:
-        if isinstance(message, HumanMessage):
-            file.write(f"You: {message.content}\n")
-        elif isinstance(message, AIMessage):
-            ai_text = str(message.content).strip()
-            if ai_text:
-                file.write(f"AI: {ai_text}\n")
-        elif isinstance(message, ToolMessage):
-            file.write(f"Tool: {message.content}\n")
-    file.write("\nEnd of Conversation\n")
+    save_conversation_log(conversation_history)
+    print("Conversation saved to logging.txt")
 
-print("Conversation saved to logging.txt")
+
+if __name__ == "__main__":
+    main()

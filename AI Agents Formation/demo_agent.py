@@ -46,21 +46,29 @@ graph.add_edge(START, "process")
 graph.add_edge("process", END)
 agent = graph.compile()
 
-print("🤖 LangGraph Agent Initialized! Type 'exit' to quit.\n")
+def run_agent_turn(conversation_history: List[dict], user_input: str):
+    updated_messages = list(conversation_history)
+    updated_messages.append({"role": "user", "content": user_input})
+    result = agent.invoke({"messages": updated_messages})
+    return result["messages"]
 
-conversation_history = []
 
-while True:
-    user_input = input("Enter: ")
-    
-    if user_input.lower() in ["exit", "quit"]:
-        print("Goodbye!")
-        break
-        
-    if not user_input.strip():
-        continue
-        
-    conversation_history.append({"role": "user", "content": user_input})
-    
-    result = agent.invoke({"messages": conversation_history})
-    conversation_history = result["messages"]
+def main() -> None:
+    print("🤖 LangGraph Agent Initialized! Type 'exit' to quit.\n")
+    conversation_history = []
+
+    while True:
+        user_input = input("Enter: ")
+
+        if user_input.lower() in ["exit", "quit"]:
+            print("Goodbye!")
+            break
+
+        if not user_input.strip():
+            continue
+
+        conversation_history = run_agent_turn(conversation_history, user_input)
+
+
+if __name__ == "__main__":
+    main()

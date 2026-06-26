@@ -1,33 +1,3 @@
 Your Conversation Log:
-You: hey can you tell me what the 3 multiplied by 84 is ?
-Tool: 252
-AI: 3 multiplied by 84 is 252.
-You: 3 multiplied by 84 is 252.
-AI: That's correct! 3 multiplied by 84 is indeed 252. If you have any other questions or need more calculations, feel free to ask!
-You: can you tell me the capital of delhi
-AI: The capital of Delhi is New Delhi. New Delhi serves as the seat of the Government of India and is part of the larger National Capital Territory of Delhi (NCT). If you have more questions or need information on a different topic, feel free to ask!
-You: divide the population of delhi with the naumber i askd you to caluclate
-AI: To divide the population of Delhi by the number you asked me to calculate (which is 252), I need the current population of Delhi. As of the last known estimate in 2021, the population was around 20 million (20,000,000). 
-
-Would you like me to use this estimate for the calculation?
-You: yes use this estimate 
-Tool: 19999748
-AI: The result of dividing the estimated population of Delhi (20,000,000) by 252 is approximately 19,998,000. 
-
-If you have any further questions or if you need additional calculations, just let me know!
-You: what was the first question i asked ?
-AI: The first question you asked was, "can you tell me what the 3 multiplied by 84 is?"
-You: what is my name 
-AI: I'm sorry, but I don't have access to your name or personal information unless you provide it. How would you like me to address you?
-You: My name is Jatin Agarwal, I am intern at congnio labs, now make a short intro for me.
-AI: Here's a short introduction for you, Jatin Agarwal:
-
----
-
-Hello! My name is Jatin Agarwal, and I am currently an intern at Cognio Labs. With a keen interest in [your field of study or expertise], I am eager to learn and contribute to innovative projects within the team. I am passionate about [briefly mention any relevant skills, projects, or interests], and I look forward to gaining valuable experience and insights during my internship.
-
----
-
-Feel free to customize any part of this introduction to better fit your personality and experience!
 
 End of Conversation
